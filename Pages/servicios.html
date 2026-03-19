@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Mundo Mascotas</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"> Mundo Mascotas</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="inicio.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html" class="active">Servicios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Nuestros Servicios</h1>
+        
+        <!-- ===== SERVICIOS MÉDICOS ===== -->
+        <h2 class="section-subtitle">🏥 Servicios Médicos</h2>
+        <div class="services-grid">
+            <!-- 1. Consulta General -->
+            <div class="service-card">
+                <div class="service-icon">🩺</div>
+                <h3>Consulta General</h3>
+                <p class="service-description">Revisión completa de la mascota para detectar enfermedades o problemas de salud.</p>
+                <div class="service-details">
+                    <p><strong>Incluye:</strong></p>
+                    <ul class="service-list">
+                        <li>Revisión física</li>
+                        <li>Diagnóstico básico</li>
+                        <li>Recomendaciones de tratamiento</li>
+                        <li>Control de peso y nutrición</li>
+                        <li>Historia clinica digital</li>
+                    </ul>
+                </div>
+                <div class="price">$45</div>
+                <button class="btn" onclick="agregarServicioCarrito('consultaGeneral')">Agendar cita</button>
+            </div>
+
+            <!-- 2. Vacunación -->
+            <div class="service-card">
+                <div class="service-icon">💉</div>
+                <h3>Vacunación</h3>
+                <p class="service-description">Aplicación de vacunas esenciales para prevenir enfermedades contagiosas.</p>
+                <div class="service-details">
+                    <p><strong>Vacunas comunes:</strong></p>
+                    <ul class="service-list">
+                        <li>Rabia</li>
+                        <li>Parvovirus</li>
+                        <li>Moquillo</li>
+                        <li>Hepatitis canina</li>
+                        <li>Leucemia felina</li>
+                    </ul>
+                </div>
+                <div class="price">$35</div>
+                <button class="btn" onclick="agregarServicioCarrito('vacunacion')">Agendar cita</button>
+            </div>
+
+            <!-- 3. Desparasitación -->
+            <div class="service-card">
+                <div class="service-icon">🪱</div>
+                <h3>Desparasitación</h3>
+                <p class="service-description">Tratamiento para eliminar parásitos internos y externos.</p>
+                <div class="service-details">
+                    <p><strong>Tipos:</strong></p>
+                    <ul class="service-list">
+                        <li>Desparasitación intestinal</li>
+                        <li>Tratamiento contra pulgas</li>
+                        <li>Tratamiento contra garrapatas</li>
+                        <li>Control de ácaros</li>
+                        <li>Prevención de parásitos cardíacos</li>
+                    </ul>
+                </div>
+                <div class="price">$30</div>
+                <button class="btn" onclick="agregarServicioCarrito('desparasitacion')">Agendar cita</button>
+            </div>
+
+            <!-- 4. Cirugías Veterinarias -->
+            <div class="service-card">
+                <div class="service-icon">🔪</div>
+                <h3>Cirugías Veterinarias</h3>
+                <p class="service-description">Procedimientos médicos que requieren intervención quirúrgica.</p>
+                <div class="service-details">
+                    <p><strong>Ejemplos:</strong></p>
+                    <ul class="service-list">
+                        <li>Esterilización</li>
+                        <li>Castración</li>
+                        <li>Cirugías de emergencia</li>
+                        <li>Extracción de tumores</li>
+                        <li>Cirugías ortopédicas</li>
+                    </ul>
+                </div>
+                <div class="price">$200 - $500</div>
+                <button class="btn" onclick="agregarServicioCarrito('cirugias')">Consultar</button>
+            </div>
+
+            <!-- 5. Esterilización y Castración -->
+            <div class="service-card">
+                <div class="service-icon">⚕️</div>
+                <h3>Esterilización</h3>
+                <p class="service-description">Procedimiento quirúrgico para evitar la reproducción.</p>
+                <div class="service-details">
+                    <p><strong>Beneficios:</strong></p>
+                    <ul class="service-list">
+                        <li>Previene enfermedades</li>
+                        <li>Reduce comportamiento agresivo</li>
+                        <li>Controla la población animal</li>
+                        <li>Elimina el marcaje territorial</li>
+                        <li>Aumenta esperanza de vida</li>
+                    </ul>
+                </div>
+                <div class="price">$150 - $250</div>
+                <button class="btn" onclick="agregarServicioCarrito('esterilizacion')">Consultar</button>
+            </div>
+
+            <!-- 6. Emergencias Veterinarias -->
+            <div class="service-card emergency">
+                <div class="service-icon">🚑</div>
+                <h3>Emergencias 24/7</h3>
+                <p class="service-description">Atención veterinaria inmediata para mascotas en estado crítico.</p>
+                <div class="service-details">
+                    <p><strong>Ejemplos:</strong></p>
+                    <ul class="service-list">
+                        <li>Accidentes</li>
+                        <li>Intoxicaciones</li>
+                        <li>Convulsiones</li>
+                        <li>Heridas graves</li>
+                        <li>Dificultad respiratoria</li>
+                    </ul>
+                </div>
+                <div class="price">$100 - $400</div>
+                <button class="btn btn-emergency" onclick="agregarServicioCarrito('emergencia')">Urgencias</button>
+            </div>
+        </div>
+
+        <!-- ===== SERVICIOS DE DIAGNÓSTICO ===== -->
+        <h2 class="section-subtitle">🔬 Diagnóstico y Análisis</h2>
+        <div class="services-grid">
+            <!-- 7. Hospitalización -->
+            <div class="service-card">
+                <div class="service-icon">🏥</div>
+                <h3>Hospitalización</h3>
+                <p class="service-description">Cuando una mascota necesita observación.</p>
+                <div class="service-details">
+                    <p><strong>Incluye:</strong></p>
+                    <ul class="service-list">
+                        <li>Monitoreo constante 24/7</li>
+                        <li>Administración de medicamentos</li>
+                        <li>Recuperación post cirugía</li>
+                        <li>Fluidoterapia intravenosa</li>
+                        <li>Cuidados de enfermería</li>
+                    </ul>
+                </div>
+                <div class="price">$80/día</div>
+                <button class="btn" onclick="agregarServicioCarrito('hospitalizacion')">Consultar</button>
+            </div>
+
+            <!-- 8. Análisis Clínicos -->
+            <div class="service-card">
+                <div class="service-icon">🔬</div>
+                <h3>Análisis Clínicos</h3>
+                <p class="service-description">Pruebas para detectar enfermedades.</p>
+                <div class="service-details">
+                    <p><strong>Tipos comunes:</strong></p>
+                    <ul class="service-list">
+                        <li>Análisis de sangre</li>
+                        <li>Análisis de orina</li>
+                        <li>Pruebas de parásitos</li>
+                        <li>Radiografías</li>
+                        <li>Ultrasonido</li>
+                    </ul>
+                </div>
+                <div class="price">$40 - $150</div>
+                <button class="btn" onclick="agregarServicioCarrito('analisis')">Agendar</button>
+            </div>
+
+            <!-- 9. Odontología Veterinaria -->
+            <div class="service-card">
+                <div class="service-icon">🦷</div>
+                <h3>Odontología</h3>
+                <p class="service-description">Cuidado dental para las mascotas.</p>
+                <div class="service-details">
+                    <p><strong>Servicios:</strong></p>
+                    <ul class="service-list">
+                        <li>Limpieza dental</li>
+                        <li>Tratamiento de infecciones</li>
+                        <li>Extracción de dientes dañados</li>
+                        <li>Pulido dental</li>
+                        <li>Radiografía dental</li>
+                    </ul>
+                </div>
+                <div class="price">$60 - $200</div>
+                <button class="btn" onclick="agregarServicioCarrito('odontologia')">Agendar</button>
+            </div>
+        </div>
+
+        <!-- ===== SERVICIOS DE ESTÉTICA Y BIENESTAR ===== -->
+        <h2 class="section-subtitle">✨ Estética y Bienestar</h2>
+        <div class="services-grid">
+            <!-- 10. Estética y Baño -->
+            <div class="service-card">
+                <div class="service-icon">🛁</div>
+                <h3>Estética y Baño</h3>
+                <p class="service-description">Servicios de higiene y cuidado del pelaje.</p>
+                <div class="service-details">
+                    <p><strong>Incluye:</strong></p>
+                    <ul class="service-list">
+                        <li>Baño</li>
+                        <li>Corte de pelo</li>
+                        <li>Limpieza de oídos</li>
+                        <li>Corte de uñas</li>
+                        <li>Peinado y estilizado</li>
+                    </ul>
+                </div>
+                <div class="price">$35</div>
+                <button class="btn" onclick="agregarServicioCarrito('estetica')">Agendar</button>
+            </div>
+
+            <!-- 11. Asesoría Nutricional -->
+            <div class="service-card">
+                <div class="service-icon">🥗</div>
+                <h3>Asesoría Nutricional</h3>
+                <p class="service-description">Recomendaciones de alimentación personalizadas.</p>
+                <div class="service-details">
+                    <p><strong>Según:</strong></p>
+                    <ul class="service-list">
+                        <li>Edad</li>
+                        <li>Raza</li>
+                        <li>Peso</li>
+                        <li>Condición médica</li>
+                        <li>Nivel de actividad</li>
+                    </ul>
+                </div>
+                <div class="price">$30</div>
+                <button class="btn" onclick="agregarServicioCarrito('nutricion')">Agendar</button>
+            </div>
+        </div>
+
+        <!-- ===== PRODUCTOS ===== -->
+        <h2 class="section-subtitle">🛍️ Productos</h2>
+        <div class="services-grid">
+            <!-- 12. Venta de Productos -->
+            <div class="service-card">
+                <div class="service-icon">🛒</div>
+                <h3>Venta de Productos</h3>
+                <p class="service-description">Todo lo que tu mascota necesita.</p>
+                <div class="service-details">
+                    <p><strong>Ejemplos:</strong></p>
+                    <ul class="service-list">
+                        <li>Alimento para mascotas</li>
+                        <li>Medicamentos</li>
+                        <li>Collares y correas</li>
+                        <li>Juguetes</li>
+                        <li>Vitaminas</li>
+                    </ul>
+                </div>
+                <div class="price">Consultar</div>
+                <button class="btn" onclick="agregarServicioCarrito('productos')">Ver productos</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Carrito Flotante -->
+    <div class="cart-icon-container">
+        <div class="cart-icon" onclick="toggleCarritoFlotante()">
+            <span>🛒</span>
+            <span class="cart-count" id="cart-count">0</span>
+        </div>
+        <div class="cart-dropdown" id="cart-dropdown">
+            <div class="cart-header">
+                <h3>Mi Carrito</h3>
+                <button class="btn-vaciar" onclick="vaciarCarrito()">Vaciar</button>
+            </div>
+            <div class="cart-items-flotante" id="cart-items-flotante">
+                <p class="cart-empty">🐾 El carrito está vacío</p>
+            </div>
+            <div class="cart-footer">
+                Total: <span id="cart-total-flotante">$0</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mundo Mascotas Veterinaria - Cuidando a tus mejores amigos 🐾</p>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/carrito.js"></script>
+</body>
+</html>

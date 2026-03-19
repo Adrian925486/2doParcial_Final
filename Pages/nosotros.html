@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Mundo Mascotas</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🐾 Mundo Mascotas</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="inicio.html">Catálogo</a></li>
+                <li><a href="nosotros.html" class="active">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="about-section">
+            <h1 class="page-title">Sobre Nosotros</h1>
+            <p style="font-size: 1.1rem; text-align: center; max-width: 800px; margin: 0 auto 2rem;">Somos una empresa dedicada al cuidado y bienestar de las mascotas, con más de 10 años de experiencia en el sector.</p>
+            
+            <h2 style="text-align: center; color: #2c3e50; margin: 2rem 0;">Nuestro Equipo</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300" alt="Veterinario">
+                    <h3>Dr. Juan Pérez</h3>
+                    <p>Veterinario Principal</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Especialista en pequeños animales</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300" alt="Entrenador">
+                    <h3>María García</h3>
+                    <p>Entrenadora Profesional</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">10 años de experiencia en comportamiento canino</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300" alt="Peluquera">
+                    <h3>Laura Martínez</h3>
+                    <p>Peluquería Canina</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Estilista profesional de mascotas</p>
+                </div>
+            </div>
+
+            <h2 style="text-align: center; color: #2c3e50; margin: 2rem 0;">Contacto</h2>
+            <form id="contactForm" class="form-container">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez">
+                    <div class="error-message" id="error-nombre"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Ej: juan@email.com">
+                    <div class="error-message" id="error-email"></div>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    <div class="error-message" id="error-mensaje"></div>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; padding: 1rem;">Enviar Mensaje</button>
+            </form>
+
+            <!-- Sección de Tareas Pendientes (nueva funcionalidad DOM) -->
+            <h2 style="text-align: center; color: #2c3e50; margin: 3rem 0 1rem;">📋 Tareas del Día</h2>
+            <div id="lista-tareas-pendientes" style="margin: 1rem 0;"></div>
+            <div id="contador-tareas" style="text-align: center; color: #e67e22; font-weight: bold; margin-bottom: 2rem;"></div>
+
+            <!-- Creador de Tareas Dinámicas (createElement) -->
+            <h2 style="text-align: center; color: #2c3e50; margin: 2rem 0 1rem;">➕ Agregar Nueva Tarea</h2>
+            <form id="form-crear-tarea" style="max-width: 500px; margin: 0 auto;">
+                <div style="display: flex; gap: 0.5rem;">
+                    <input type="text" id="input-nueva-tarea" placeholder="Escribe una nueva tarea..." style="flex: 1; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 5px;">
+                    <button type="submit" class="btn" style="padding: 0.8rem 1.5rem;">Agregar</button>
+                </div>
+            </form>
+            <ul id="lista-tareas-creadas" class="lista-tareas-dom" style="max-width: 500px; margin: 1rem auto;"></ul>
+            <div id="contador-tareas-creadas" style="text-align: right; max-width: 500px; margin: 0 auto; color: #666;"></div>
+        </div>
+    </main>
+
+    <!-- Carrito Flotante -->
+    <div class="cart-icon-container">
+        <div class="cart-icon" onclick="toggleCarritoFlotante()">
+            <span>🛒</span>
+            <span class="cart-count" id="cart-count">0</span>
+        </div>
+        <div class="cart-dropdown" id="cart-dropdown">
+            <div class="cart-header">
+                <h3>Mi Carrito</h3>
+                <button class="btn-vaciar" onclick="vaciarCarrito()">Vaciar</button>
+            </div>
+            <div class="cart-items-flotante" id="cart-items-flotante">
+                <p class="cart-empty">El carrito está vacío</p>
+            </div>
+            <div class="cart-footer">
+                Total: <span id="cart-total-flotante">$0</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mundo Mascotas - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/carrito.js"></script>
+    <script src="../scripts/validacion.js"></script>
+    <script src="../scripts/dom.js"></script>
+</body>
+</html>

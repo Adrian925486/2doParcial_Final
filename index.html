@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Mascotas - Inicio</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Mundo Mascotas</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="pages/inicio.html">Catálogo</a></li>
+                <li><a href="pages/nosotros.html">Nosotros</a></li>
+                <li><a href="pages/servicios.html">Servicios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Bienvenido a Mundo Mascotas</h1>
+            <p>El lugar donde tus mascotas reciben el mejor cuidado veterinario</p>
+            <div class="hero-buttons">
+                <a href="pages/inicio.html" class="btn">Ver Mascotas</a>
+                <a href="pages/servicios.html" class="btn">Nuestros Servicios</a>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Mascotas Atendidas</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10</div>
+                <div class="stat-label">Años de Experiencia</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Clientes Felices</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Emergencias</div>
+            </div>
+        </section>
+
+        <!-- Lo que ofrecemos - AHORA EN CUADROS PROFESIONALES -->
+        <h2 class="page-title">Lo que ofrecemos</h2>
+        
+        <div class="offers-grid">
+            <div class="offer-card">
+                <div class="offer-icon">🐕</div>
+                <h3>Adopción de Perros</h3>
+                <p>Encuentra tu compañero canino ideal entre nuestras razas disponibles. Todos nuestros perros están vacunados y desparasitados.</p>
+                <span class="offer-badge">Desde $100</span>
+            </div>
+
+            <div class="offer-card">
+                <div class="offer-icon">🐈</div>
+                <h3>Adopción de Gatos</h3>
+                <p>Gatos amorosos y juguetones esperan por un hogar cálido. Conoce a nuestros felinos y encuentra tu compañero perfecto.</p>
+                <span class="offer-badge">Desde $80</span>
+            </div>
+
+            <div class="offer-card">
+                <div class="offer-icon">🏥</div>
+                <h3>Servicios Veterinarios</h3>
+                <p>Atención profesional y cuidado médico para tu mascota. Consultas, vacunas, cirugías y más.</p>
+                <span class="offer-badge">Especialistas</span>
+            </div>
+
+            <div class="offer-card">
+                <div class="offer-icon">✂️</div>
+                <h3>Peluquería Canina</h3>
+                <p>Servicios de estética y cuidado personal para mascotas. Baño, corte, uñas y limpieza de oídos.</p>
+                <span class="offer-badge">Profesionales</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Carrito Flotante -->
+    <div class="cart-icon-container">
+        <div class="cart-icon" onclick="toggleCarritoFlotante()">
+            <span>🛒</span>
+            <span class="cart-count" id="cart-count">0</span>
+        </div>
+        <div class="cart-dropdown" id="cart-dropdown">
+            <div class="cart-header">
+                <h3>Mi Carrito</h3>
+                <button class="btn-vaciar" onclick="vaciarCarrito()">Vaciar</button>
+            </div>
+            <div class="cart-items-flotante" id="cart-items-flotante">
+                <p class="cart-empty">🐾 El carrito está vacío</p>
+            </div>
+            <div class="cart-footer">
+                Total: <span id="cart-total-flotante">$0</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mundo Mascotas Veterinaria - Cuidando a tus mejores amigos 🐾</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/carrito.js"></script>
+    <script src="scripts/dom.js"></script>
+</body>
+</html>
